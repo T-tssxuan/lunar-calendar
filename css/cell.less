@@ -1,0 +1,136 @@
+@basic-background-color: #00ccff;
+@calendar-cell-container-width: 500px;
+@calendar-cell-container-height: 450px;
+@calendar-cell-width: 14%;
+@calendar-cell-height: 16%;
+@calendar-cell-background-color: white;
+@calendar-cell-hover-background-color: #ccff33;
+@calendar-cell-selected-background-color: #ffffcc;
+
+@calendar-cell-header-container-width: 500px;
+@calendar-cell-header-container-heigth: 40px;
+@calendar-cell-header-height: 100%;
+@calendar-cell-header-width: 14%;
+@calendar-cell-header-paddind-top: 1%;
+@calendar-cell-header-background-color: pink;
+
+@-webkit-keyframes flip-cell {
+    0% { -webkit-transform: rotateY(0deg);}
+    50% { -webkit-transform: rotateY(180deg);}
+    100% { -webkit-transform: rotateY(0deg);}
+}
+@-moz-keyframes flip-cell {
+    0% { transform: rotateY(0deg);}
+    50% { transform: rotateY(180deg);}
+    100% { transform: rotateY(0deg);}
+}
+@-o-keyframes flip-cell {
+    0% { transform: rotateY(0deg);}
+    50% { transform: rotateY(180deg);}
+    100% { transform: rotateY(0deg);}
+}
+@keyframes flip-cell {
+    0% { transform: rotateY(0deg);}
+    50% { transform: rotateY(180deg);}
+    100% { transform: rotateY(0deg);}
+}
+
+.animation-custom(@name, @duration, @timing, @delay) {
+    -webkit-animation: @name @duration @timing @delay;
+    -moz-animation: @name @duration @timing @delay;
+    -o-animation: @name @duration @timing @delay;
+    animation: @name @duration @timing @delay;
+}
+
+#calendar-cell-header-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: @calendar-cell-header-container-width;
+    height: @calendar-cell-header-container-heigth;
+    background-color: @basic-background-color;
+    float: left;
+    overflow: auto;
+
+    .calendar-cell-header {
+        width: @calendar-cell-header-width;
+        height: @calendar-cell-header-height;
+        padding-top: @calendar-cell-header-paddind-top;
+        background-color: @calendar-cell-header-background-color;
+        color: white;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+        float: left;
+    }
+}
+
+#calendar-cell-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    width: @calendar-cell-container-width;
+    height: @calendar-cell-container-height;
+    background-color: @basic-background-color;
+    float: left;
+    overflow: auto;
+
+    .calendar-cell {
+        position: relative;
+        width: @calendar-cell-width;
+        height: @calendar-cell-height;
+        background-color: @calendar-cell-background-color;
+        &:hover {
+            background-color: @calendar-cell-hover-background-color;
+            .animation-custom(flip-cell, 0.4s, ease-in-out, 0s);
+        }
+        .cc-holiday {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 25%;
+            height: 25%;
+            font-size: 1en;
+            background-color: green;
+            color: white;
+        }
+        .cc-solar-day {
+            width: 100%;
+            height: 40%;
+            margin-top: 20%;
+            font-size: 2em;
+            font-weight: bold;
+            text-align: center;
+        }
+        .cc-detail-day {
+            width: 100%;
+            height: 1em;
+            margin-top: 2%;
+            font-size: 0.8em;
+            line-height: 1em;
+            text-align: center;
+            overflow: hidden;
+        }
+        .cc-lunar-day {
+            .cc-detail-day;
+            color: #ccc;
+        }
+        .cc-lunar-term {
+            .cc-detail-day;
+            color: blue;
+        }
+        .cc-lunar-holiday {
+            .cc-detail-day;
+            color: red;
+        }
+        .cc-solar-holiday {
+            .cc-detail-day;
+            color: green;
+        }
+    }
+
+    #calendar-cell-selected {
+        background-color: @calendar-cell-selected-background-color;
+    }
+}

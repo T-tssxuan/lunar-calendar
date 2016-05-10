@@ -1,0 +1,91 @@
+#calendar-detail-contianer {
+  float: right;
+  width: 180px;
+  height: 490px;
+  background-color: #CCFFFF;
+}
+#calendar-detail-contianer .cd-item {
+  width: 100%;
+  text-align: center;
+  float: left;
+  margin: 2px auto;
+}
+#calendar-detail-contianer #cd-date-info {
+  width: 100%;
+  text-align: center;
+  float: left;
+  margin: 2px auto;
+  color: #aaa;
+}
+#calendar-detail-contianer #cd-date-number {
+  width: 100%;
+  float: left;
+  margin: 2px auto;
+  height: 100px;
+  font-size: 100px;
+  text-align: center;
+  color: #00CCFF;
+}
+#calendar-detail-contianer .cd-lunar-item {
+  width: 100%;
+  text-align: center;
+  float: left;
+  margin: 2px auto;
+  font-size: 1em;
+  color: #aaa;
+}
+#calendar-detail-contianer #cd-lunar-should {
+  width: 100%;
+  text-align: center;
+  float: left;
+  margin: 2px auto;
+  margin-top: 10px;
+  background-color: rgba(0, 255, 0, 0.2);
+  height: 6.5em;
+  overflow: scroll;
+}
+#calendar-detail-contianer #cd-lunar-should #cd-lunar-should-info {
+  width: 100%;
+  color: green;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+#calendar-detail-contianer #cd-lunar-should #cd-lunar-should-items {
+  width: 100%;
+  height: 5.2em;
+  overflow: auto;
+}
+#calendar-detail-contianer #cd-lunar-should .cd-lunar-should-item {
+  width: 50%;
+  float: left;
+  color: green;
+  height: 1.3em;
+  font-size: 1em;
+}
+#calendar-detail-contianer #cd-lunar-avoid {
+  width: 100%;
+  text-align: center;
+  float: left;
+  margin: 2px auto;
+  background-color: rgba(255, 0, 0, 0.2);
+  margin-top: 10px;
+  height: 6.5em;
+  overflow: hidden;
+}
+#calendar-detail-contianer #cd-lunar-avoid #cd-lunar-avoid-info {
+  width: 100%;
+  color: red;
+  font-weight: bold;
+  font-size: 1.3em;
+}
+#calendar-detail-contianer #cd-lunar-avoid #cd-lunar-avoid-items {
+  width: 100%;
+  overflow: auto;
+}
+#calendar-detail-contianer #cd-lunar-avoid .cd-lunar-avoid-item {
+  width: 50%;
+  float: left;
+  color: red;
+  height: 1.3em;
+  font-size: 1em;
+}

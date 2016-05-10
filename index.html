@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/cell.css" rel="stylesheet">
+    <link href="css/detail.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <script data-main="app" src="js/lib/require.js"></script>
+  </head>
+  <body>
+    <div id="calendar-container">
+      <div id="calendar-header-container">
+        <div id="ch-year" class="ch-item">
+          <div class="ch-pre" id="ch-year-pre">&lt;</div>
+          <div class="ch-next" id="ch-year-next">&gt;</div>
+          <div class="ch-selector-container">
+            <div class="ch-selector" id="ch-year-value">2015 年</div>
+            <div class="ch-selector-items" id="ch-year-items">
+            </div>
+          </div>
+        </div>
+        <div id="ch-month" class="ch-item">
+          <div class="ch-pre" id="ch-month-pre">&lt;</div>
+          <div class="ch-next" id="ch-month-next">&gt;</div>
+          <div class="ch-selector-container">
+            <div class="ch-selector" id="ch-month-value">2015 年</div>
+            <div class="ch-selector-items" id="ch-month-items">
+            </div>
+          </div>
+        </div>
+        <!-- <div id="ch-holiday" class="ch-item">
+          <div class="ch-pre" id="ch-holiday-pre">&lt;</div>
+          <div class="ch-next" id="ch-holiday-next">&gt;</div>
+          <div class="ch-selector-container">
+            <div class="ch-selector" id="ch-holiday-value">2015 年</div>
+            <div class="ch-selector-items">
+              <li class="ch-selector-item">2016 年</li>
+              <li class="ch-selector-item">2017 年</li>
+              <li class="ch-selector-item">2018 年</li>
+            </div>
+          </div>
+        </div>
+        -->
+        <div id="ch-today" class="ch-item">返回今天</div>
+        <div id="ch-now" class="ch-item">2016-08-11 16:00:21</div>
+      </div>
+      <div id="calendar-cell-header-container">
+        <div class="calendar-cell-header">SU</div>
+        <div class="calendar-cell-header">MU</div>
+        <div class="calendar-cell-header">TU</div>
+        <div class="calendar-cell-header">WE</div>
+        <div class="calendar-cell-header">TH</div>
+        <div class="calendar-cell-header">FR</div>
+        <div class="calendar-cell-header">SA</div>
+      </div>
+      <div id="calendar-detail-contianer">
+        <div id="cd-date-info">2015-11 星期二</div>
+        <div id="cd-date-number">25</div>
+        <div class="cd-lunar-item">abc</div>
+        <div class="cd-lunar-item">abc</div>
+        <div class="cd-lunar-item">abc</div>
+        <div id="cd-lunar-should">
+          <div id="cd-lunar-should-info">宜</div>
+          <div id="cd-lunar-should-items">
+          </div>
+        </div>
+        <div id="cd-lunar-avoid">
+          <div id="cd-lunar-avoid-info">忌</div>
+          <div id="cd-lunar-avoid-items">
+          </div>
+        </div>
+      </div>
+      <div id="calendar-cell-container">
+        <div class="calendar-cell">
+          <div class="cc-holiday">休</div>
+          <div class="cc-solar-day">12</div>
+          <div class="cc-lunar-day">二</div>
+        </div>
+        <div class="calendar-cell"></div>
+        <div class="calendar-cell"></div>
+        <div class="calendar-cell"></div>
+        <div class="calendar-cell"></div>
+        <div class="calendar-cell"></div>
+        <div class="calendar-cell"></div>
+      </div>
+    </div>
+  </body>
+</html>

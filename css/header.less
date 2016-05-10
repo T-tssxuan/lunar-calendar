@@ -1,0 +1,100 @@
+@calendar-header-container-width: 100%;
+@calendar-header-container-height: 30px;
+@calendar-header-container-padding-lr: 0px;
+@calendar-header-container-padding-bt: 10px;
+@calendar-header-container-background-color: #00CCCC;
+
+#calendar-header-container {
+    width: @calendar-header-container-width;
+    height: @calendar-header-container-height;
+    padding: @calendar-header-container-padding-bt @calendar-header-container-padding-lr;
+    background-color: @calendar-header-container-background-color;
+    float: left;
+    position: relative;
+    z-index: 1000;
+
+    .ch-item {
+        width: 18%;
+        margin: 0% 1%;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        float: left;
+        display: relative;
+        z-index: 1000;
+    }
+    #ch-year {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    #ch-month {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    #ch-holiday {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    #ch-today {
+        text-align: center;
+        background-color: white;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    #ch-now {
+        color: #ccc;
+        font-size: 15px;
+        text-align: center;
+        background-color: white;
+        width: 36%;
+    }
+    #ch-year-items {
+        height: 100px;
+    }
+    #ch-month-items {
+        height: auto
+    }
+    .ch-pre {
+        color: #ccc;
+        float: left;
+        border: 1px solid #ccc;
+        background-color: white;
+    }
+    .ch-next {
+        color: #ccc;
+        float: right;
+        border: 1px solid #ccc;
+        background-color: white;
+    }
+    .ch-selector-container {
+        padding-left: 3px;
+        padding-right: 3px;
+        overflow: hidden;
+        text-align: center;
+        .ch-selector{
+            width: 100%;
+            border: 1px solid #ccc;
+            background-color: white;
+        }
+        .ch-selector-items {
+            width: 100%;
+            background-color: white;
+            overflow: auto;
+            display: none;
+            .ch-selector-item {
+                display: relative;
+                width: 100%;
+                list-style-type: none;
+                height: 20px;
+                margin-bottom: 2px;
+                &:hover {
+                    background-color: #77A1B4;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,159 @@
+@-webkit-keyframes flip-cell {
+  0% {
+    -webkit-transform: rotateY(0deg);
+  }
+  50% {
+    -webkit-transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+  }
+}
+@-moz-keyframes flip-cell {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@-o-keyframes flip-cell {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+@keyframes flip-cell {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+#calendar-cell-header-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 500px;
+  height: 40px;
+  background-color: #00ccff;
+  float: left;
+  overflow: auto;
+}
+#calendar-cell-header-container .calendar-cell-header {
+  width: 14%;
+  height: 100%;
+  padding-top: 1%;
+  background-color: pink;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  float: left;
+}
+#calendar-cell-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 500px;
+  height: 450px;
+  background-color: #00ccff;
+  float: left;
+  overflow: auto;
+}
+#calendar-cell-container .calendar-cell {
+  position: relative;
+  width: 14%;
+  height: 16%;
+  background-color: white;
+}
+#calendar-cell-container .calendar-cell:hover {
+  background-color: #ccff33;
+  -webkit-animation: flip-cell 0.4s ease-in-out 0s;
+  -moz-animation: flip-cell 0.4s ease-in-out 0s;
+  -o-animation: flip-cell 0.4s ease-in-out 0s;
+  animation: flip-cell 0.4s ease-in-out 0s;
+}
+#calendar-cell-container .calendar-cell .cc-holiday {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 25%;
+  height: 25%;
+  font-size: 1en;
+  background-color: green;
+  color: white;
+}
+#calendar-cell-container .calendar-cell .cc-solar-day {
+  width: 100%;
+  height: 40%;
+  margin-top: 20%;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+}
+#calendar-cell-container .calendar-cell .cc-detail-day {
+  width: 100%;
+  height: 1em;
+  margin-top: 2%;
+  font-size: 0.8em;
+  line-height: 1em;
+  text-align: center;
+  overflow: hidden;
+}
+#calendar-cell-container .calendar-cell .cc-lunar-day {
+  width: 100%;
+  height: 1em;
+  margin-top: 2%;
+  font-size: 0.8em;
+  line-height: 1em;
+  text-align: center;
+  overflow: hidden;
+  color: #ccc;
+}
+#calendar-cell-container .calendar-cell .cc-lunar-term {
+  width: 100%;
+  height: 1em;
+  margin-top: 2%;
+  font-size: 0.8em;
+  line-height: 1em;
+  text-align: center;
+  overflow: hidden;
+  color: blue;
+}
+#calendar-cell-container .calendar-cell .cc-lunar-holiday {
+  width: 100%;
+  height: 1em;
+  margin-top: 2%;
+  font-size: 0.8em;
+  line-height: 1em;
+  text-align: center;
+  overflow: hidden;
+  color: red;
+}
+#calendar-cell-container .calendar-cell .cc-solar-holiday {
+  width: 100%;
+  height: 1em;
+  margin-top: 2%;
+  font-size: 0.8em;
+  line-height: 1em;
+  text-align: center;
+  overflow: hidden;
+  color: green;
+}
+#calendar-cell-container #calendar-cell-selected {
+  background-color: #ffffcc;
+}

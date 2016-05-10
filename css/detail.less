@@ -1,0 +1,86 @@
+@calendar-detail-background-color: #CCFFFF;
+@calendar-detail-container-width: 180px;
+@calendar-detail-container-height: 490px;
+@cd-date-number-height: 100px;
+@cd-date-number-font-size: 100px;
+
+#calendar-detail-contianer {
+    float: right;
+    width: @calendar-detail-container-width;
+    height: @calendar-detail-container-height;
+    background-color: @calendar-detail-background-color;
+
+    .cd-item {
+        width: 100%;
+        text-align: center;
+        float: left;
+        margin: 2px auto;
+    }
+
+    #cd-date-info {
+        .cd-item;
+        color: #aaa;
+    }
+    #cd-date-number {
+        .cd-item;
+        height: @cd-date-number-height;
+        font-size: @cd-date-number-font-size;
+        text-align: center;
+        color: #00CCFF;
+    }
+    .cd-lunar-item {
+        .cd-item;
+        font-size: 1em;
+        color: #aaa;
+    }
+    #cd-lunar-should {
+        .cd-item;
+        margin-top: 10px;
+        background-color: rgba(0, 255, 0, 0.2);
+        height: 6.5em;
+        overflow: scroll;
+        #cd-lunar-should-info {
+            width: 100%;
+            color: green;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        #cd-lunar-should-items {
+            width: 100%;
+            height: 5.2em;
+            overflow: auto;
+        }
+        .cd-lunar-should-item {
+            width: 50%;
+            float:left;
+            color: green;
+            height: 1.3em;
+            font-size: 1em;
+        }
+    }
+    #cd-lunar-avoid {
+        .cd-item;
+        background-color: rgba(255, 0, 0, 0.2);
+        margin-top: 10px;
+        height: 6.5em;
+        overflow: hidden;
+        #cd-lunar-avoid-info {
+            width: 100%;
+            color: red;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        #cd-lunar-avoid-items {
+            width: 100%;
+            overflow: auto;
+        }
+        .cd-lunar-avoid-item {
+            width: 50%;
+            float:left;
+            color: red;
+            height: 1.3em;
+            font-size: 1em;
+        }
+    }
+}
+
